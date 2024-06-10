@@ -1,0 +1,11 @@
+# Usa un'immagine base con PHP e Apache
+FROM php:7.4-apache
+
+# Installa le dipendenze PHP necessarie per Laravel
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Copia il codice del tuo progetto Laravel nella directory di lavoro del container
+COPY . /var/www/html
+
+# Imposta il proprietario dei file nella directory di lavoro come www-data
+RUN chown -R www-data:www-data /var/www/html
