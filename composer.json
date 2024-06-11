@@ -34,14 +34,13 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "npm install",
-            "npm run build",
-            "php artisan config:cache",
-            "php artisan route:cache",
-            "php artisan view:cache"
+            "@php artisan config:cache",
+            "@php artisan route:cache",
+            "@php artisan view:cache",
+            "npm --prefix . install",
+            "npm run build"
         ]
     },
-
     "extra": {
         "laravel": {
             "dont-discover": []
