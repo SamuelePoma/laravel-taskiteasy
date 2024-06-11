@@ -31,4 +31,8 @@
         partner in your journey to success. Join us as we revolutionize the way you work, study, and
         live. Together, we can make your dreams a reality, one task at a time.
     </p>
+
+    <!-- Update asset URLs to use Laravel's asset helper function -->
+    <link rel="stylesheet" href="{{ asset('build/assets/app-fca0ba5c.css') }}">
+    <script src="{{ asset('build/assets/app-6bb05423.js') }}"></script>
 </x-layout.main>

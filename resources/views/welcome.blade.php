@@ -21,4 +21,5 @@
             <x-task.list-item :task="$task"></x-task.list-item>
         @endforeach
     </div>
+
 </x-layout.main>
