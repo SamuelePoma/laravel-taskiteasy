@@ -2,6 +2,14 @@
     <div class="navbar">
         <div class="navbar-start">
             <div class="block">
+                <section class="section">
+                    <div class="container">
+                        {{-- a very basic 'backwards' navigation --}}
+                        <a class="button is-primary mb-3" href="{{ url()->previous() }}">Back</a>
+                        <x-ui.notifications></x-ui.notifications>
+                        {{ $slot }}
+                    </div>
+                </section>
                 <h1 class="title is-4">My TODOs</h1>
                 <h2 class="subtitle is-6 is-italic">
                     Completing your tasks brings a sense of achievement, increases productivity,
@@ -21,5 +29,18 @@
             <x-task.list-item :task="$task"></x-task.list-item>
         @endforeach
     </div>
+    <section class="section">
+        <div class="container">
+            {{-- Link per tornare indietro --}}
+            <a class="button is-primary mb-3" href="{{ route('error.404') }}">Back</a>
+
+            {{-- Notifiche --}}
+            <x-ui.notifications></x-ui.notifications>
+
+            {{-- Contenuto dinamico --}}
+            {{ $slot }}
+        </div>
+    </section>
+
 
 </x-layout.main>
