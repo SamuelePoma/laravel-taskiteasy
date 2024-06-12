@@ -37,3 +37,6 @@ Route::resource('projects', ProjectController::class);
  * Route that shows the about page. This handler just returns the about view.
  */
 Route::view('/about', 'about')->name('about');
+Route::fallback(function () {
+    return view('errors.404');
+})->name('error.404');

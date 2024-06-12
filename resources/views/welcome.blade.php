@@ -27,12 +27,11 @@
             <x-task.list-item :task="$task"></x-task.list-item>
         @endforeach
     </div>
-    <section class="section">
-        <div class="container">
-            {{-- Link per tornare indietro --}}
-            <a class="button is-primary mb-3" href="{{ route('error.404') }}">Back</a>
-        </div>
-    </section>
+
+            {{-- Link to 404 page --}}
+    <a href="{{ route('error.404') }}" class="button is-danger">Page Not Found</a>
+
+
 
 
 </x-layout.main>
