@@ -2,12 +2,6 @@
     <div class="navbar">
         <div class="navbar-start">
             <div class="block">
-                <section class="section">
-                    <div class="container">
-                        {{-- a very basic 'backwards' navigation --}}
-                        <a class="button is-primary mb-3" href="{{ url()->previous() }}">Back</a>
-                    </div>
-                </section>
                 <h1 class="title is-4">My TODOs</h1>
                 <h2 class="subtitle is-6 is-italic">
                     Completing your tasks brings a sense of achievement, increases productivity,
@@ -30,6 +24,7 @@
 
             {{-- Link to 404 page --}}
     <a href="{{ route('error.404') }}" class="button is-danger">Page Not Found</a>
+    <a href="{{ route('error.500') }}" class="button is-warning">Page Not Found</a>
 
 
 
