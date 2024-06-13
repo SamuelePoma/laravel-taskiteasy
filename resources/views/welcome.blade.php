@@ -23,8 +23,8 @@
     </div>
 
             {{-- Link to 404 page --}}
-    <a href="{{ route('error.404') }}" class="button is-danger">Page Not Found</a>
-    <a href="{{ route('error.500') }}" class="button is-warning">Page Not Found</a>
+    <a href="{{ route('error.404') }}" class="button is-danger">404 error page</a>
+    <a href="{{ route('error.500') }}" class="button is-warning">500 error page</a>
 
 
 
